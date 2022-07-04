@@ -1,0 +1,51 @@
+.button{
+  width: 250px;
+  height: 100px;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dark{
+  font-size: 30px;
+  background-color: #2c2c2c;
+  color: #e5e5e5;
+}
+
+.dark:hover{
+  background-color: #3c3c3c;
+}
+
+.white{
+  text-decoration: none;
+  background-color: #e5e5e5;
+  color: #1c1c1c;
+  font-size: 25px;
+}
+
+.white:hover{
+  background-color: #c0c0c0;
+}
+
+.white.link-button{
+  background-color: transparent;
+}
+
+.small-button{
+  width: 160px;
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.red{
+  background-color: #b62825;
+  color: #e5e5e5;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.red:hover{
+  background-color: #ff0900;
+}

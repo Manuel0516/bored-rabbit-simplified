@@ -1,0 +1,18 @@
+.policy-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.policy-title{
+  font-size: 48px;
+  color: #e5e5e5;
+  text-align: center;
+}
+
+.policy-text{
+  margin-top: 160px;
+  color: #e5e5e5;
+  text-align: center;
+  font-size: 100px;
+}

@@ -1,0 +1,33 @@
+.all-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container{
+  width: 600px;
+  height: 80px;
+  background-color: #1c1c1c;
+  color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.navbar-item{
+  margin: 25px;
+  font-size: 25px;
+  display: flex;
+}
+
+.navbar-link{
+  color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo{
+  height: 30px;
+}
