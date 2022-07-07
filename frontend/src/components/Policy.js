@@ -1,4 +1,4 @@
-import '../stylesheets/Policy.css'
+import '../stylesheets/Policy.css';
 
 function Policy(){
   return(

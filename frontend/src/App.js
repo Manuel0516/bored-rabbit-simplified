@@ -1,13 +1,12 @@
-import './App.css';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import{
   BrowserRouter as Router,
   Routes,
-  Route,
-  BrowserRouter
+  Route
 } from 'react-router-dom';
 
+import './App.css';
 
 import Send from './components/Send';
 import Receive from './components/Receive';
@@ -18,7 +17,9 @@ function App() {
   const [id, setId] = useState('')
   const [sended, setSended] = useState(false)
 
-  const createLink = async (files, navigate) => {
+
+  //Send the files to de dataBase
+  const createLink = async files => {
 
     // Prepare the file to post
     const file = files[0]
@@ -45,7 +46,7 @@ function App() {
       console.log(response)
     })
 
-    //Copy the ID
+    //Copy the ID to the clipboard
     if ('clipboard' in navigator) {
       await navigator.clipboard.writeText(fileTmp.Id);
     } else {
@@ -53,20 +54,28 @@ function App() {
     }
   }
 
+  // Change ID for recive the files
   const changeId = e => {
-    console.log(e.target.value)
     setId(e.target.value)
   }
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
           <Routes>
-            <Route path='/' element={< Send createLink={createLink} sended={sended} id={id}  />}></Route>
-            <Route path={`/receive`} element={< Receive id={id} changeId={changeId} />}></Route>
-            <Route path={`/policy`} element={<Policy />}></Route>
+            <Route 
+              path='/' 
+              element={ <Send createLink={createLink} sended={sended} id={id} /> } />
+            
+            <Route 
+              path='/receive' 
+              element={ <Receive id={id} changeId={changeId} />} />
+            
+            <Route 
+              path='/policy'
+              element={ <Policy /> } />
           </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

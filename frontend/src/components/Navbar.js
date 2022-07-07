@@ -1,6 +1,9 @@
-import Logo from '../images/Logo.png';
-import '../stylesheets/Navbar.css';
 import { Link } from 'react-router-dom'; 
+
+import Logo from '../images/Logo.png';
+
+import '../stylesheets/Navbar.css';
+
 import { InfoCircleFill, Github } from 'react-bootstrap-icons';
 
 function Navbar(){
