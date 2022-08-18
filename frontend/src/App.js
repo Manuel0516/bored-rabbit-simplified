@@ -11,6 +11,7 @@ import './App.css';
 import Send from './components/Send';
 import Receive from './components/Receive';
 import Policy from './components/Policy';
+import Landing from './components/Landing';
 
 function App() {
 
@@ -64,9 +65,13 @@ function App() {
       <Router>
           <Routes>
             <Route 
-              path='/' 
+              path='/send' 
               element={ <Send createLink={createLink} sended={sended} id={id} /> } />
             
+            <Route 
+              path='/'
+              element={ <Landing />}/>
+              
             <Route 
               path='/receive' 
               element={ <Receive id={id} changeId={changeId} />} />
